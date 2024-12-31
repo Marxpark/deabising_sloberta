@@ -17,6 +17,8 @@ elif [ $model_type = 'dbert' ]; then
     model_name_or_path=distilbert-base-uncased
 elif [ $model_type = 'electra' ]; then
     model_name_or_path=google/electra-small-discriminator
+elif [ $model_type = 'sloberta' ]; then
+    model_name_or_path=EMBEDDIA/sloberta
 fi
 
 TRAIN_DATA=../preprocess/$seed/$model_type/data.bin
@@ -46,3 +48,26 @@ CUDA_VISIBLE_DEVICES=$gpu python ../src/run_debias_mlm.py \
     --dev_data_size $dev_data_size \
     --square_loss \
     --line_by_line
+
+
+# debias layer [all, first, last]
+# loss target [sentence, token]
+
+
+# bert standard
+#./debias.sh bert
+
+# sloberta standard
+# python run_debias_mlm.py --output_dir=../debiased_models/42/sloberta --model_type=sloberta --model_name_or_path=EMBEDDIA/sloberta --do_train --data_file=../preprocess/42/sloberta/data.bin --do_eval --learning_rate 5e-5 --per_gpu_train_batch_size 32 --per_gpu_eval_batch_size 32 --num_train_epochs 3 --block_size 128 --loss_target token --debias_layer all --seed 42 --evaluate_during_training --weighted_loss 0.2 0.8 --dev_data_size 1000 --square_loss --line_by_line
+# python run_debias_mlm.py --output_dir=../debiased_models/42/sloberta --model_type=sloberta --model_name_or_path=EMBEDDIA/sloberta --do_train --data_file=../preprocess/42/sloberta/data.bin --do_eval --learning_rate 5e-5 --per_gpu_train_batch_size 32 --per_gpu_eval_batch_size 32 --num_train_epochs 3 --block_size 128 --loss_target token --debias_layer first --seed 42 --evaluate_during_training --weighted_loss 0.2 0.8 --dev_data_size 1000 --square_loss --line_by_line
+# python run_debias_mlm.py --output_dir=../debiased_models/42/sloberta --model_type=sloberta --model_name_or_path=EMBEDDIA/sloberta --do_train --data_file=../preprocess/42/sloberta/data.bin --do_eval --learning_rate 5e-5 --per_gpu_train_batch_size 32 --per_gpu_eval_batch_size 32 --num_train_epochs 3 --block_size 128 --loss_target token --debias_layer last --seed 42 --evaluate_during_training --weighted_loss 0.2 0.8 --dev_data_size 1000 --square_loss --line_by_line
+
+#CUDA_VISIBLE_DEVICES=2 python run_debias_mlm.py --output_dir=../debiased_models/42/sloberta --model_type=sloberta --model_name_or_path=EMBEDDIA/sloberta --do_train --data_file=../preprocess/42/sloberta/data.bin --do_eval --learning_rate 5e-5 --per_gpu_train_batch_size 32 --per_gpu_eval_batch_size 32 --num_train_epochs 3 --block_size 128 --loss_target token --debias_layer all --seed 42 --evaluate_during_training --weighted_loss 0.2 0.8 --dev_data_size 1000 --square_loss --line_by_line
+# sloberta pycharm
+#--output_dir=../debiased_models/42/sloberta --model_type=sloberta --model_name_or_path=EMBEDDIA/sloberta --do_train --data_file=../preprocess/42/sloberta/data.bin --do_eval --learning_rate 5e-5 --per_gpu_train_batch_size 32 --per_gpu_eval_batch_size 32 --num_train_epochs 3 --block_size 128 --loss_target token --debias_layer all --seed 42 --evaluate_during_training --weighted_loss 0.2 0.8 --dev_data_size 1000 --square_loss --line_by_line
+
+#bert pycharm
+#--output_dir=../debiased_models/42/bert --model_type=bert --model_name_or_path=bert-base-uncased --do_train --data_file=../preprocess/42/bert/data.bin --do_eval --learning_rate 5e-5 --per_gpu_train_batch_size 32 --per_gpu_eval_batch_size 32 --num_train_epochs 3 --block_size 128 --loss_target token --debias_layer all --seed 42 --evaluate_during_training --weighted_loss 0.2 0.8 --dev_data_size 1000 --square_loss --line_by_line
+
+# roberta pycharm
+#--output_dir=../debiased_models/42/roberta --model_type=roberta --model_name_or_path=roberta-base --do_train --data_file=../preprocess/42/roberta/data.bin --do_eval --learning_rate 5e-5 --per_gpu_train_batch_size 32 --per_gpu_eval_batch_size 32 --num_train_epochs 3 --block_size 128 --loss_target token --debias_layer all --seed 42 --evaluate_during_training --weighted_loss 0.2 0.8 --dev_data_size 1000 --square_loss --line_by_line

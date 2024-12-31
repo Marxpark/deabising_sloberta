@@ -1,0 +1,29 @@
+{"choice1":"Sonce je vzhajalo.","choice2":"Trava je bila pokošena.","idx":0,"label":0,"premise":"Moje telo je metalo senco na travo.","question":"cause"}
+{"choice1":"Ženska je vedela, da ima njena prijateljica težko obdobje.","choice2":"Ženski se je zdelo, da njena prijateljica izkorišča njeno prijaznost.","idx":1,"label":0,"premise":"Ženska je tolerirala prijateljičino naporno vedenje.","question":"cause"}
+{"choice1":"Zgradili so kanal.","choice2":"Prišla je poplava.","idx":2,"label":0,"premise":"Kmetijske površine je bilo treba zalivati.","question":"effect"}
+{"choice1":"Kavarna se je znova odprla na novi lokaciji.","choice2":"Hoteli sta pokramljati.","idx":2,"label":1,"premise":"Dobili sta se na kavi.","question":"cause"}
+{"choice1":"Napovedane so bile visoke temperature.","choice2":"Nameravala je teči ob plaži.","idx":3,"label":0,"premise":"Tekačica je nosila kratke hlače.","question":"cause"}
+{"choice1":"Odločila se je, da bo tožila svojega delodajalca.","choice2":"Odločila se je, da bo kandidirala na volitvah.","idx":3,"label":0,"premise":"Najela je odvetnika.","question":"cause"}
+{"choice1":"Pokril sem si ušesa.","choice2":"Začel sem prepevati.","idx":4,"label":1,"premise":"Na radiu se je zavrtela moja najljubša pesem.","question":"effect"}
+{"choice1":"Imeli so zabavo presenečenja.","choice2":"Imeli so rojstnodnevno zabavo.","idx":4,"label":0,"premise":"Povabljenci so se skrili za kavč.","question":"cause"}
+{"choice1":"Uporabil je negativne oglase.","choice2":"Nihče ni glasoval zanj.","idx":5,"label":1,"premise":"Politik je izgubil volitve.","question":"cause"}
+{"choice1":"Pokrpal sem srajco.","choice2":"Pobelil sem srajco.","idx":6,"label":1,"premise":"Odstranil sem madež s srajce.","question":"cause"}
+{"choice1":"Pozdravil je blagajničarja.","choice2":"Uporabil je kupon.","idx":7,"label":1,"premise":"Dobil je popust na svoj nakup.","question":"cause"}
+{"choice1":"Pacient je tožil zdravnika zaradi malomarnosti.","choice2":"Pacient je zdravniku razkril zaupne podatke.","idx":8,"label":0,"premise":"Zdravnik je napačno diagnosticiral pacienta.","question":"effect"}
+{"choice1":"Prodajalec je premalo zaračunal stranki.","choice2":"Prodajalec je bil nesramen do stranke.","idx":9,"label":1,"premise":"Stranka se je pritožila vodji trgovine.","question":"cause"}
+{"choice1":"Pipa je puščala.","choice2":"Pipa je bila zaprta.","idx":10,"label":0,"premise":"Popravila je svojo pipo.","question":"cause"}
+{"choice1":"Njena hčerka je prišla počistit hišo.","choice2":"Njena hčerja se je preselila k njej, da bi skrbela zanjo.","idx":11,"label":1,"premise":"Starko je zadela kap.","question":"effect"}
+{"choice1":"Ljudje so se drsali na ribniku.","choice2":"Ljudje so pripeljali čolne do ribnika.","idx":12,"label":0,"premise":"Ribnik je zmrznil čez zimo.","question":"effect"}
+{"choice1":"Poslali so jo nazaj v zapor.","choice2":"Ukradla je denar iz cerkve.","idx":13,"label":0,"premise":"Prestopnica je kršila pogojni izpust.","question":"effect"}
+{"choice1":"Prijatelj se je zbudil.","choice2":"Prijatelj je smrčal.","idx":14,"label":0,"premise":"Spečega prijatelja sem polil z vodo.","question":"effect"}
+{"choice1":"Prijatelj ji je za majico vrgel ledeno kocko.","choice2":"Prijatelj jo je potrepljal po hrbtu.","idx":15,"label":0,"premise":"Dekle je zajelo sapo.","question":"cause"}
+{"choice1":"Nanjo sem polil belilo.","choice2":"Dal sem jo v sušilni stroj.","idx":16,"label":1,"premise":"Srajca se je skrčila.","question":"cause"}
+{"choice1":"Z neba so začele padati snežinke.","choice2":"Na nebu se je prikazala luna.","idx":17,"label":1,"premise":"Zunaj se je stemnilo.","question":"effect"}
+{"choice1":"Klicatelj se je poslovil od mene.","choice2":"Klicatelj se mi je predstavil.","idx":18,"label":0,"premise":"Odložil sem telefon.","question":"cause"}
+{"choice1":"Loščila je prstan.","choice2":"Prstan je padel v odtok.","idx":19,"label":1,"premise":"Prstan ji je zdrsnil s prsta med tuširanjem.","question":"effect"}
+{"choice1":"Zmagala je na tekmovanju iz črkovanja.","choice2":"Spoznala je novega prijatelja.","idx":20,"label":0,"premise":"Deklica je dobila nagrado.","question":"cause"}
+{"choice1":"Odprl ji je vrata.","choice2":"Vprašal jo je, če ima rada suši.","idx":21,"label":0,"premise":"Njen zmenek je hotel izpasti kot kavalir.","question":"effect"}
+{"choice1":"Prepričana je bila, da ima gripo.","choice2":"Skrbelo jo je, da bo dobila gripo.","idx":23,"label":0,"premise":"Gostiteljica je odpovedala zabavo.","question":"cause"}
+{"choice1":"Privlačil jo je.","choice2":"Odbijal jo je.","idx":24,"label":0,"premise":"Dala mu je svojo telefonsko številko.","question":"cause"}
+{"choice1":"Odprla je padalo.","choice2":"Skočila je iz letala.","idx":25,"label":0,"premise":"Padalka je varno pristala na tleh.","question":"cause"}
+{"choice1":"Mama jo je dala spat.","choice2":"Mama ji je spletla lase v kitke.","idx":26,"label":0,"premise":"Malčica je postala sitna.","question":"effect"}

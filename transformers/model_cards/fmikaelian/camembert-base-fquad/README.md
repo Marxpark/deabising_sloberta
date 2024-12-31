@@ -17,7 +17,7 @@ python3 ./examples/run_squad.py \
 --do_train \
 --do_eval \
 --do_lower_case \
---train_file train.json \
+--train_file train.jsonl \
 --predict_file valid.json \
 --learning_rate 3e-5 \
 --num_train_epochs 2 \

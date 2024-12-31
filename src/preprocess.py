@@ -1,6 +1,7 @@
 import argparse
 import regex as re
 import nltk
+import json
 
 import torch
 from torch.utils.data import Dataset
@@ -19,7 +20,7 @@ def parse_args():
     parser.add_argument('--block_size', type=int, default=128)
     parser.add_argument('--seed', type=int, default=42)
     parser.add_argument('--model_type', type=str, required=True,
-                        choices=['bert', 'roberta', 'electra', 'albert', 'dbert'])
+                        choices=['bert', 'roberta', 'electra', 'albert', 'dbert', 'sloberta'])
 
     args = parser.parse_args()
 
@@ -62,6 +63,10 @@ def prepare_transformer(args):
         pretrained_weights = 'transfo-xl-wt103'
         model = TransfoXLModel.from_pretrained(pretrained_weights)
         tokenizer = TransfoXLTokenizer.from_pretrained(pretrained_weights)
+    elif args.model_type == 'sloberta':
+        pretrained_weights = "EMBEDDIA/sloberta"
+        tokenizer = AutoTokenizer.from_pretrained(pretrained_weights)
+        model = AutoModelForMaskedLM.from_pretrained(pretrained_weights, output_hidden_states=True)
 
     return model, tokenizer
 
@@ -110,6 +115,10 @@ def main(args):
     attributes_examples = [[] for _ in range(len(attributes_l))]
     attributes_labels = [[] for _ in range(len(attributes_l))]
 
+    original_neutral_examples = []
+    original_attribute_examples = []
+    original_labels = []
+
     other_num = 0
 
     for line in data:
@@ -154,7 +163,9 @@ def main(args):
                                 line_ngram = list(nltk.ngrams(line, len(label)))
                     idx = line_ngram.index(label)
                     attributes_examples[i].append(line)
+                    original_attribute_examples.append(orig_line)
                     attributes_labels[i].append([idx + j for j in range(len(label))])
+                    original_labels.append([label])
                 break
 
         if neutral_flag:
@@ -189,12 +200,28 @@ def main(args):
     data = {'attributes_examples': attributes_examples,
             'attributes_labels': attributes_labels,
             'neutral_examples': neutral_examples}
+    # len 1 46967
+    # len 2 77893
+    # len neut 131072
+    shortened_examples = [attributes_examples[0][0:4696], attributes_examples[1][0:7789]]
+    shortened_labels = [attributes_labels[0][0:4696], attributes_labels[1][0:7789]]
+    shortened_neutrals = neutral_examples[0:13107]
+    # shortened data for testing purposes
+    data = {'attributes_examples': shortened_examples,
+            'attributes_labels': shortened_labels,
+            'neutral_examples': shortened_neutrals}
 
 
     if args.stereotypes:
         data['neutral_labels'] = neutral_labels
 
     torch.save(data, args.output + '/data.bin')
+
+    # data2 = {'attributes_examples': original_attribute_examples,
+    #         'attributes_labels': attributes_labels,
+    #         'neutral_examples': original_neutral_examples}
+    # neutral_output = open("../preprocess/42/sloberta/neutral_examples", "w")
+    # neutral_output.write(json.dumps(data2))
 
 
 if __name__ == "__main__":

@@ -360,10 +360,15 @@ def train(args, data, datasets, model: PreTrainedModel, original_model, tokenize
 
     def get_hiddens_of_model(input):
         model.zero_grad()
+        # todo check updated returned values
         if args.model_type == 'roberta':
-            _, _, hiddens = model.roberta(input)
+            # _, _, hiddens = model.roberta(input)
+            # outputs = model.roberta(input)
+            hiddens = model.roberta(input).hidden_states
         elif args.model_type == 'bert':
-            _, _, hiddens = model.bert(input)
+            # _, _, hiddens= model.bert(input)
+            output = model.bert(input)
+            hiddens = model.bert(input).hidden_states
         elif args.model_type == 'albert':
             _, _, hiddens = model.albert(input)
         elif args.model_type == 'dbert':
@@ -374,6 +379,9 @@ def train(args, data, datasets, model: PreTrainedModel, original_model, tokenize
             _, _, hiddens = model.transformer(input)
         elif args.model_type == 'gpt':
             _, hiddens = model.transformer(input)
+        elif args.model_type == "sloberta":
+            # _, _, hiddens = model.roberta(input)
+            hiddens = model.roberta(input).hidden_states
 
         return hiddens
 
@@ -414,19 +422,52 @@ def train(args, data, datasets, model: PreTrainedModel, original_model, tokenize
         else:
             labels = None
         inputs = inputs.to(args.device)
-        if args.model_type == 'roberta':
-            final_layer_hiddens, first_token_hidden, all_layer_hiddens = model.roberta(inputs)
+        if args.model_type == 'roberta' or args.model_type == "sloberta":
+            # todo update transformers have different return types, check if correct values are assigned to variables
+            # original line:
+            # final_layer_hiddens, first_token_hidden, all_layer_hiddens = model.roberta(inputs)
+
+            # workaround:
+            output = model.roberta(inputs)
+            all_layer_hiddens = output.hidden_states
+            final_layer_hiddens = output.last_hidden_state
+
             if 'neutral' != key:
                 with torch.no_grad():
-                    final_layer_original_hiddens, _, all_layer_original_hiddens = original_model.roberta(inputs)
+                    # todo update transformers have different return types, check if correct values are assigned to variables
+                    # original
+                    # final_layer_original_hiddens, _, all_layer_original_hiddens = original_model.roberta(inputs)
+
+                    # workaround
+                    original_output = model.roberta(inputs)
+                    all_layer_original_hiddens = original_output.hidden_states
+                    final_layer_original_hiddens = original_output.last_hidden_state
+
                 if args.token_loss:
                     token_predicts = model.lm_head(final_layer_hiddens)
                     token_original = original_model.lm_head(final_layer_original_hiddens)
+
         elif args.model_type == 'bert':
-            final_layer_hiddens, first_token_hidden, all_layer_hiddens = model.bert(inputs)
+            # todo update transformers have different return types, check if correct values are assigned to variables
+            # original
+            # final_layer_hiddens, first_token_hidden, all_layer_hiddens = model.bert(inputs)
+
+            # workaround:
+            output = model.bert(inputs)
+            all_layer_hiddens = output.hidden_states
+            final_layer_hiddens = output.last_hidden_state
+
             if 'neutral' != key:
                 with torch.no_grad():
-                    final_layer_original_hiddens, _, all_layer_original_hiddens = original_model.bert(inputs)
+                    # todo update transformers have different return types, check if correct values are assigned to variables
+                    # original
+                    # final_layer_original_hiddens, _, all_layer_original_hiddens = original_model.bert(inputs)
+
+                    # workaround
+                    original_output = model.bert(inputs)
+                    all_layer_original_hiddens = original_output.hidden_states
+                    final_layer_original_hiddens = original_output.last_hidden_state
+
                 if args.token_loss:
                     token_predicts = model.cls(final_layer_hiddens)
                     token_original = original_model.cls(final_layer_original_hiddens)
@@ -501,14 +542,14 @@ def train(args, data, datasets, model: PreTrainedModel, original_model, tokenize
         #elif args.loss_target == 'token' and key == 'neutral':
         elif args.loss_target == 'token':
             if labels.size(1) > 1:
-                onehot = torch.eye(target_layer_hiddens.size(1))
-                zeros = torch.zeros(1, onehot.size(0))
+                onehot = torch.eye(target_layer_hiddens.size(1), device=target_layer_hiddens.device)
+                zeros = torch.zeros(1, onehot.size(0), device=target_layer_hiddens.device)
                 onehot = torch.cat((zeros, onehot), 0)
                 onehot = onehot[labels]
                 onehot = torch.sum(onehot, 1)
                 onehot = onehot.view(target_layer_hiddens.size(0), -1, 1, 1)
             else:
-                onehot = torch.eye(target_layer_hiddens.size(1))[labels].view(target_layer_hiddens.size(0), -1, 1, 1)
+                onehot = torch.eye(target_layer_hiddens.size(1), device=target_layer_hiddens.device)[labels].view(target_layer_hiddens.size(0), -1, 1, 1)
             onehot = onehot.to(args.device)
             target_layer_hiddens = torch.sum(target_layer_hiddens * onehot, 1).unsqueeze(1) / labels.size(1)
             if 'neutral' != key:
@@ -908,8 +949,10 @@ def main():
     if args.block_size <= 0:
         args.block_size = tokenizer.max_len
         # Our input block size will be the max possible for the model
-    else:
+    elif hasattr(tokenizer, "max_len"):
         args.block_size = min(args.block_size, tokenizer.max_len)
+    else:
+        args.block_size = min(args.block_size, tokenizer.model_max_length)
 
     if args.model_name_or_path:
         model = AutoModelWithLMHead.from_pretrained(
