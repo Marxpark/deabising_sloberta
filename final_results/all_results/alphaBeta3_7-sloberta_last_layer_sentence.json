@@ -1,0 +1,145 @@
+{
+    "sentiment": {
+        "sentiment": {
+            "loss": 0.9791910648345947,
+            "metrics": {
+                "accuracy": 0.5613972764949674,
+                "f1_macro": 0.23969867030689115,
+                "f1_negative": 0.0,
+                "f1_neutral": 0.7190960109206734,
+                "f1_positive": 0.0,
+                "precision_negative": 0.0,
+                "precision_neutral": 0.5613972764949674,
+                "precision_positive": 0.0,
+                "recall_negative": 0.0,
+                "recall_neutral": 1.0,
+                "recall_positive": 0.0
+            }
+        }
+    },
+    "seat": {
+        "average": -2.684322653518403e-09,
+        "standard_deviation": 1.0682625197717074e-08,
+        "min_value": -4.470348358154297e-08,
+        "min_sentence": "pravobranilsko delo\n",
+        "max_value": 2.9802322387695312e-08,
+        "max_sentence": "gozdarsko delo\n"
+    },
+    "heilman": {
+        "positive_to_positive": {
+            "average": -2.449809283565806e-09,
+            "standard_deviation": 1.1763420902879594e-08,
+            "min_value": -3.0984954380031127e-08,
+            "min_sentence": "kartografsko delo\n",
+            "max_value": 4.0446009208494615e-08,
+            "max_sentence": "geodetsko delo\n"
+        },
+        "positive_to_positive_mixed": {
+            "average": -6.059101039341535e-09,
+            "standard_deviation": 1.9077998857109655e-08,
+            "min_value": -6.50447513628194e-08,
+            "min_sentence": "bibliote\u0161ko delo\n",
+            "max_value": 4.0919061694566494e-08,
+            "max_sentence": "igralsko delo\n"
+        },
+        "negative_to_negative": {
+            "average": 1.04675499804617e-09,
+            "standard_deviation": 1.0747599674524488e-08,
+            "min_value": -3.240411228233597e-08,
+            "min_sentence": "konjerejsko delo\n",
+            "max_value": 2.6017900056629628e-08,
+            "max_sentence": "kustosko delo\n"
+        },
+        "negative_to_negative_mixed": {
+            "average": -1.9203928036434484e-09,
+            "standard_deviation": 1.7433304544425158e-08,
+            "min_value": -4.825137867037199e-08,
+            "min_sentence": "notarsko delo\n",
+            "max_value": 4.375737860939921e-08,
+            "max_sentence": "\u0161peditersko delo\n"
+        },
+        "neutral_to_neutral": {
+            "average": -3.252992450822157e-09,
+            "standard_deviation": 1.0356747371591945e-08,
+            "min_value": -3.169453344220585e-08,
+            "min_sentence": "logopedsko delo\n",
+            "max_value": 2.3179584140997633e-08,
+            "max_sentence": "bioenergeti\u010dno delo\n"
+        },
+        "neutral_to_neutral_mixed": {
+            "average": -5.625301585300115e-09,
+            "standard_deviation": 1.5053271247561118e-08,
+            "min_value": -5.8895065935260504e-08,
+            "min_sentence": "logopedsko delo\n",
+            "max_value": 4.233822004096055e-08,
+            "max_sentence": "bioenergeti\u010dno delo\n"
+        },
+        "directional_bias_alligned": {
+            "average": 8.031831672563511e-10,
+            "standard_deviation": 1.2426734911317286e-08,
+            "min_value": -3.6188534502379355e-08,
+            "min_sentence": "fotografsko delo\n",
+            "max_value": 3.760769284877341e-08,
+            "max_sentence": "vodi\u0161ko delo\n"
+        },
+        "directional_bias_alligned_mixed": {
+            "average": -4.3379945404142096e-10,
+            "standard_deviation": 1.8646162292855897e-08,
+            "min_value": -5.5583696756400514e-08,
+            "min_sentence": "bibliote\u0161ko delo\n",
+            "max_value": 5.132622282744137e-08,
+            "max_sentence": "plesalsko delo\n"
+        },
+        "directional_bias_from_neutrals": {
+            "average": 1.1091576867363287e-09,
+            "standard_deviation": 9.7322353774249e-09,
+            "min_value": -2.5544847681580052e-08,
+            "min_sentence": "fotografsko delo\n",
+            "max_value": 3.240411250438058e-08,
+            "max_sentence": "kardiolo\u0161ko delo\n"
+        },
+        "spread": {
+            "average": -3.496564281611976e-09,
+            "standard_deviation": 1.6053037959806434e-08,
+            "min_value": -4.896095817663593e-08,
+            "min_sentence": "varuhovno delo\n",
+            "max_value": 3.7371166383692866e-08,
+            "max_sentence": "igralsko delo\n"
+        }
+    },
+    "glue": {
+        "boolq": {
+            "eval_loss": 0.699338436126709,
+            "eval_accuracy": 0.6,
+            "eval_runtime": 0.112,
+            "eval_samples_per_second": 44.626,
+            "eval_steps_per_second": 8.925,
+            "epoch": 10.0
+        },
+        "cb": {
+            "eval_loss": 0.9909143447875977,
+            "eval_accuracy": 0.8333333333333334,
+            "eval_f1": 0.7575757575757575,
+            "eval_runtime": 0.1215,
+            "eval_samples_per_second": 49.376,
+            "eval_steps_per_second": 8.229,
+            "epoch": 10.0
+        },
+        "copa": {
+            "eval_loss": 0.6932570338249207,
+            "eval_accuracy": 0.0,
+            "eval_runtime": 0.8601,
+            "eval_samples_per_second": 46.505,
+            "eval_steps_per_second": 2.325,
+            "epoch": 10.0
+        },
+        "rte": {
+            "eval_loss": 0.6949653625488281,
+            "eval_accuracy": 0.3333333333333333,
+            "eval_runtime": 0.133,
+            "eval_samples_per_second": 90.219,
+            "eval_steps_per_second": 7.518,
+            "epoch": 10.0
+        }
+    }
+}

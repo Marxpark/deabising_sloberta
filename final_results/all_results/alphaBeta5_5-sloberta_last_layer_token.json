@@ -1,0 +1,145 @@
+{
+    "sentiment": {
+        "sentiment": {
+            "loss": 0.979140043258667,
+            "metrics": {
+                "accuracy": 0.5613972764949674,
+                "f1_macro": 0.23969867030689115,
+                "f1_negative": 0.0,
+                "f1_neutral": 0.7190960109206734,
+                "f1_positive": 0.0,
+                "precision_negative": 0.0,
+                "precision_neutral": 0.5613972764949674,
+                "precision_positive": 0.0,
+                "recall_negative": 0.0,
+                "recall_neutral": 1.0,
+                "recall_positive": 0.0
+            }
+        }
+    },
+    "seat": {
+        "average": -1.4140250840209672e-08,
+        "standard_deviation": 2.0211471206595365e-08,
+        "min_value": -8.940696716308594e-08,
+        "min_sentence": "vinogradni\u0161ko delo\n",
+        "max_value": 1.4901161193847656e-08,
+        "max_sentence": "katehetsko delo\n"
+    },
+    "heilman": {
+        "positive_to_positive": {
+            "average": 1.127274597072325e-09,
+            "standard_deviation": 2.7719120385164334e-08,
+            "min_value": -8.58590716301677e-08,
+            "min_sentence": "striptizersko delo\n",
+            "max_value": 1.1991886861295598e-07,
+            "max_sentence": "astrolo\u0161ko delo\n"
+        },
+        "positive_to_positive_mixed": {
+            "average": 4.2172146909354555e-10,
+            "standard_deviation": 4.363618772452761e-08,
+            "min_value": -1.246493952500316e-07,
+            "min_sentence": "geodetsko delo\n",
+            "max_value": 1.537421394637306e-07,
+            "max_sentence": "jezikoslovno delo\n"
+        },
+        "negative_to_negative": {
+            "average": -1.382924367456228e-09,
+            "standard_deviation": 2.5686697688619035e-08,
+            "min_value": -7.143096258932502e-08,
+            "min_sentence": "\u010debelarsko delo\n",
+            "max_value": 6.977527866602884e-08,
+            "max_sentence": "statisti\u010dno delo\n"
+        },
+        "negative_to_negative_mixed": {
+            "average": -1.1393525487607533e-08,
+            "standard_deviation": 3.724290501314085e-08,
+            "min_value": -1.128230771030303e-07,
+            "min_sentence": "fotografsko delo\n",
+            "max_value": 9.863149563749118e-08,
+            "max_sentence": "komi\u010darsko delo\n"
+        },
+        "neutral_to_neutral": {
+            "average": -6.564361578186697e-09,
+            "standard_deviation": 2.710284442262634e-08,
+            "min_value": -7.403275281703259e-08,
+            "min_sentence": "kartografsko delo\n",
+            "max_value": 6.953875197890369e-08,
+            "max_sentence": "\u0161portno delo\n"
+        },
+        "neutral_to_neutral_mixed": {
+            "average": -8.321702181247213e-09,
+            "standard_deviation": 4.063965118607381e-08,
+            "min_value": -1.4546371573942452e-07,
+            "min_sentence": "kartografsko delo\n",
+            "max_value": 1.0667339189751601e-07,
+            "max_sentence": "voja\u0161ko delo\n"
+        },
+        "directional_bias_alligned": {
+            "average": 7.691636175259021e-09,
+            "standard_deviation": 3.4883651225049575e-08,
+            "min_value": -8.207464952114663e-08,
+            "min_sentence": "skladateljsko delo\n",
+            "max_value": 1.603648777104283e-07,
+            "max_sentence": "astrolo\u0161ko delo\n"
+        },
+        "directional_bias_alligned_mixed": {
+            "average": 8.743423650340758e-09,
+            "standard_deviation": 5.189344167480949e-08,
+            "min_value": -1.4096971545640713e-07,
+            "min_sentence": "esejisti\u010dno delo\n",
+            "max_value": 1.5729003410847042e-07,
+            "max_sentence": "farmacevtsko delo\n"
+        },
+        "directional_bias_from_neutrals": {
+            "average": 6.504978360221999e-09,
+            "standard_deviation": 3.218475291852771e-08,
+            "min_value": -8.089201819494463e-08,
+            "min_sentence": "arheolo\u0161ko delo\n",
+            "max_value": 1.435715056841147e-07,
+            "max_sentence": "astrolo\u0161ko delo\n"
+        },
+        "spread": {
+            "average": 2.510198964528553e-09,
+            "standard_deviation": 3.8337980351431656e-08,
+            "min_value": -1.1968234248094234e-07,
+            "min_sentence": "striptizersko delo\n",
+            "max_value": 1.279607650950254e-07,
+            "max_sentence": "astrolo\u0161ko delo\n"
+        }
+    },
+    "glue": {
+        "boolq": {
+            "eval_loss": 0.7037400007247925,
+            "eval_accuracy": 0.6,
+            "eval_runtime": 0.1161,
+            "eval_samples_per_second": 43.049,
+            "eval_steps_per_second": 8.61,
+            "epoch": 10.0
+        },
+        "cb": {
+            "eval_loss": 0.9592742323875427,
+            "eval_accuracy": 0.8333333333333334,
+            "eval_f1": 0.7575757575757575,
+            "eval_runtime": 0.1407,
+            "eval_samples_per_second": 42.647,
+            "eval_steps_per_second": 7.108,
+            "epoch": 10.0
+        },
+        "copa": {
+            "eval_loss": 0.6936441659927368,
+            "eval_accuracy": 0.0,
+            "eval_runtime": 0.9376,
+            "eval_samples_per_second": 42.663,
+            "eval_steps_per_second": 2.133,
+            "epoch": 10.0
+        },
+        "rte": {
+            "eval_loss": 0.6968111395835876,
+            "eval_accuracy": 0.3333333333333333,
+            "eval_runtime": 0.1261,
+            "eval_samples_per_second": 95.149,
+            "eval_steps_per_second": 7.929,
+            "epoch": 10.0
+        }
+    }
+}

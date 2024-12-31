@@ -1,0 +1,145 @@
+{
+    "sentiment": {
+        "sentiment": {
+            "loss": 0.9791876077651978,
+            "metrics": {
+                "accuracy": 0.5613972764949674,
+                "f1_macro": 0.23969867030689115,
+                "f1_negative": 0.0,
+                "f1_neutral": 0.7190960109206734,
+                "f1_positive": 0.0,
+                "precision_negative": 0.0,
+                "precision_neutral": 0.5613972764949674,
+                "precision_positive": 0.0,
+                "recall_negative": 0.0,
+                "recall_neutral": 1.0,
+                "recall_positive": 0.0
+            }
+        }
+    },
+    "seat": {
+        "average": -4.227277960302203e-11,
+        "standard_deviation": 1.4879859023529716e-08,
+        "min_value": -4.967053723881065e-08,
+        "min_sentence": "vede\u017eevalsko delo\n",
+        "max_value": 6.95387523119706e-08,
+        "max_sentence": "avtomehani\u010darsko delo\n"
+    },
+    "heilman": {
+        "positive_to_positive": {
+            "average": -5.06367727559395e-09,
+            "standard_deviation": 1.7019624454765195e-08,
+            "min_value": -5.250885370955416e-08,
+            "min_sentence": "nad\u0161kofijsko delo\n",
+            "max_value": 3.642506063439299e-08,
+            "max_sentence": "varnostno delo\n"
+        },
+        "positive_to_positive_mixed": {
+            "average": -1.021693262191729e-08,
+            "standard_deviation": 2.9562524858340237e-08,
+            "min_value": -1.0785602388985183e-07,
+            "min_sentence": "nad\u0161kofijsko delo\n",
+            "max_value": 6.811959396557654e-08,
+            "max_sentence": "bioenergeti\u010dno delo\n"
+        },
+        "negative_to_negative": {
+            "average": 9.279885673135639e-10,
+            "standard_deviation": 1.296495783938897e-08,
+            "min_value": -4.257474595092958e-08,
+            "min_sentence": "sla\u0161\u010di\u010darsko delo\n",
+            "max_value": 4.9434011106797016e-08,
+            "max_sentence": "pod\u010dastni\u0161ko delo\n"
+        },
+        "negative_to_negative_mixed": {
+            "average": 2.16094516843216e-09,
+            "standard_deviation": 1.9336098679049956e-08,
+            "min_value": -5.7712433720880085e-08,
+            "min_sentence": "\u0161iviljsko delo\n",
+            "max_value": 8.798780903873649e-08,
+            "max_sentence": "striptizersko delo\n"
+        },
+        "neutral_to_neutral": {
+            "average": -2.6380239033419143e-09,
+            "standard_deviation": 1.0894338274846336e-08,
+            "min_value": -3.973643014631989e-08,
+            "min_sentence": "to\u010dajsko delo\n",
+            "max_value": 2.885621719350695e-08,
+            "max_sentence": "govedorejsko delo\n"
+        },
+        "neutral_to_neutral_mixed": {
+            "average": -1.924418815318789e-09,
+            "standard_deviation": 1.65327253250151e-08,
+            "min_value": -5.227232735549592e-08,
+            "min_sentence": "mikrobiolo\u0161ko delo\n",
+            "max_value": 4.3993904075279033e-08,
+            "max_sentence": "\u0161peditersko delo\n"
+        },
+        "directional_bias_alligned": {
+            "average": -2.4256533722520357e-09,
+            "standard_deviation": 1.6568210996572247e-08,
+            "min_value": -4.872443171155538e-08,
+            "min_sentence": "pogrebni\u0161ko delo\n",
+            "max_value": 6.717348832729897e-08,
+            "max_sentence": "hmeljarsko delo\n"
+        },
+        "directional_bias_alligned_mixed": {
+            "average": -8.292513806598502e-09,
+            "standard_deviation": 2.718904707035708e-08,
+            "min_value": -1.1329613003319139e-07,
+            "min_sentence": "nad\u0161kofijsko delo\n",
+            "max_value": 9.271833589785672e-08,
+            "max_sentence": "hmeljarsko delo\n"
+        },
+        "directional_bias_from_neutrals": {
+            "average": 2.0421787551796607e-09,
+            "standard_deviation": 1.1885247838259057e-08,
+            "min_value": -3.6188534058290145e-08,
+            "min_sentence": "kirur\u0161ko delo\n",
+            "max_value": 5.4874117139114276e-08,
+            "max_sentence": "hmeljarsko delo\n"
+        },
+        "spread": {
+            "average": -5.991665842907514e-09,
+            "standard_deviation": 2.1394741525863724e-08,
+            "min_value": -6.741001490340182e-08,
+            "min_sentence": "mlekarsko delo\n",
+            "max_value": 5.416453818796185e-08,
+            "max_sentence": "botani\u010darsko delo\n"
+        }
+    },
+    "glue": {
+        "boolq": {
+            "eval_loss": 0.7435766458511353,
+            "eval_accuracy": 0.6,
+            "eval_runtime": 0.1125,
+            "eval_samples_per_second": 44.425,
+            "eval_steps_per_second": 8.885,
+            "epoch": 10.0
+        },
+        "cb": {
+            "eval_loss": 1.031394124031067,
+            "eval_accuracy": 0.8333333333333334,
+            "eval_f1": 0.7575757575757575,
+            "eval_runtime": 0.12,
+            "eval_samples_per_second": 50.01,
+            "eval_steps_per_second": 8.335,
+            "epoch": 10.0
+        },
+        "copa": {
+            "eval_loss": 0.6931788325309753,
+            "eval_accuracy": 0.0,
+            "eval_runtime": 0.8229,
+            "eval_samples_per_second": 48.607,
+            "eval_steps_per_second": 2.43,
+            "epoch": 10.0
+        },
+        "rte": {
+            "eval_loss": 0.7049074172973633,
+            "eval_accuracy": 0.3333333333333333,
+            "eval_runtime": 0.1204,
+            "eval_samples_per_second": 99.661,
+            "eval_steps_per_second": 8.305,
+            "epoch": 10.0
+        }
+    }
+}

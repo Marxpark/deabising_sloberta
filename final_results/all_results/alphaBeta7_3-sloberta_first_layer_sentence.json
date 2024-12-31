@@ -1,0 +1,150 @@
+{
+    "sentiment": {
+        "sentiment": {
+            "loss": 0.9784998893737793,
+            "metrics": {
+                "accuracy": 0.5613972764949674,
+                "f1_macro": 0.23969867030689115,
+                "f1_negative": 0.0,
+                "f1_neutral": 0.7190960109206734,
+                "f1_positive": 0.0,
+                "precision_negative": 0.0,
+                "precision_neutral": 0.5613972764949674,
+                "precision_positive": 0.0,
+                "recall_negative": 0.0,
+                "recall_neutral": 1.0,
+                "recall_positive": 0.0
+            }
+        }
+    },
+//    Visoka stopnja razpristranjanja z α 3 in β 7.
+//Srednja stopnja razpristranjanja z α in β 5.
+//Nizka stopnja razpristranjanja z α 7 in β 3.
+//Kontrolna najnižja stopnja razpristranjevanja z α 9 in β 1
+
+    "seat": {
+        "average": -6.48464716812569e-08,
+        "standard_deviation": 3.8464054690581406e-08,
+        "min_value": -1.8874804186275185e-07,
+        "min_sentence": "opti\u010darsko delo\n",
+        "max_value": 5.463759111812294e-08,
+        "max_sentence": "poro\u010devalsko delo\n"
+    },
+    "heilman": {
+        "positive_to_positive": {
+            "average": 2.9188360409511067e-09,
+            "standard_deviation": 2.7759485082035667e-08,
+            "min_value": -8.183812338913299e-08,
+            "min_sentence": "kirur\u0161ko delo\n",
+            "max_value": 1.1069434036059533e-07,
+            "max_sentence": "pod\u010dastni\u0161ko delo\n"
+        },
+        "positive_to_positive_mixed": {
+            "average": -3.459323938415082e-09,
+            "standard_deviation": 4.78480230857755e-08,
+            "min_value": -1.3552960798079994e-07,
+            "min_sentence": "kamnose\u0161ko delo\n",
+            "max_value": 1.6343972042420774e-07,
+            "max_sentence": "fotoreportersko delo\n"
+        },
+        "negative_to_negative": {
+            "average": 2.4971145709126906e-09,
+            "standard_deviation": 2.5521270243680597e-08,
+            "min_value": -6.45716982106137e-08,
+            "min_sentence": "blagajni\u010darsko delo\n",
+            "max_value": 9.129917843964108e-08,
+            "max_sentence": "dimnikarsko delo\n"
+        },
+        "negative_to_negative_mixed": {
+            "average": 5.266989305217168e-09,
+            "standard_deviation": 3.774786244931697e-08,
+            "min_value": -9.390096789019253e-08,
+            "min_sentence": "zgodovinarsko delo\n",
+            "max_value": 1.1708055192016786e-07,
+            "max_sentence": "cerkovno delo\n"
+        },
+        "neutral_to_neutral": {
+            "average": 8.142546315690666e-10,
+            "standard_deviation": 2.6847779766330813e-08,
+            "min_value": -6.78830673894737e-08,
+            "min_sentence": "gete\u010dirasko delo\n",
+            "max_value": 1.0052370646995712e-07,
+            "max_sentence": "aran\u017eersko delo\n"
+        },
+        "neutral_to_neutral_mixed": {
+            "average": 9.088651703577514e-10,
+            "standard_deviation": 4.2240741403942145e-08,
+            "min_value": -1.0076023260197076e-07,
+            "min_sentence": "gete\u010dirasko delo\n",
+            "max_value": 1.1920929043895967e-07,
+            "max_sentence": "pod\u010dastni\u0161ko delo\n"
+        },
+        "directional_bias_alligned": {
+            "average": 2.1045814093820403e-09,
+            "standard_deviation": 2.7643000450634447e-08,
+            "min_value": -7.379622712910816e-08,
+            "min_sentence": "aran\u017eersko delo\n",
+            "max_value": 1.0265244343443669e-07,
+            "max_sentence": "bioenergeti\u010dno delo\n"
+        },
+        "directional_bias_alligned_mixed": {
+            "average": -4.368189108772833e-09,
+            "standard_deviation": 4.3170664551634696e-08,
+            "min_value": -1.0359854885066966e-07,
+            "min_sentence": "etnolo\u0161ko delo\n",
+            "max_value": 1.963168858587494e-07,
+            "max_sentence": "bioenergeti\u010dno delo\n"
+        },
+        "directional_bias_from_neutrals": {
+            "average": 3.804551529610085e-10,
+            "standard_deviation": 2.3344448537316866e-08,
+            "min_value": -6.599085611291855e-08,
+            "min_sentence": "krupje\u0161ko delo\n",
+            "max_value": 6.386211892639437e-08,
+            "max_sentence": "prevajalsko delo\n"
+        },
+        "spread": {
+            "average": 4.217214700384162e-10,
+            "standard_deviation": 3.275784165126412e-08,
+            "min_value": -9.48470733064255e-08,
+            "min_sentence": "kamnose\u0161ko delo\n",
+            "max_value": 1.0927518245829049e-07,
+            "max_sentence": "bioenergeti\u010dno delo\n"
+        }
+    },
+    "glue": {
+        "boolq": {
+            "eval_loss": 0.7382816076278687,
+            "eval_accuracy": 0.6,
+            "eval_runtime": 0.1202,
+            "eval_samples_per_second": 41.581,
+            "eval_steps_per_second": 8.316,
+            "epoch": 10.0
+        },
+        "cb": {
+            "eval_loss": 0.9844894409179688,
+            "eval_accuracy": 0.8333333333333334,
+            "eval_f1": 0.7575757575757575,
+            "eval_runtime": 0.1222,
+            "eval_samples_per_second": 49.1,
+            "eval_steps_per_second": 8.183,
+            "epoch": 10.0
+        },
+        "copa": {
+            "eval_loss": 0.6932706832885742,
+            "eval_accuracy": 0.0,
+            "eval_runtime": 0.8977,
+            "eval_samples_per_second": 44.559,
+            "eval_steps_per_second": 2.228,
+            "epoch": 10.0
+        },
+        "rte": {
+            "eval_loss": 0.7026872634887695,
+            "eval_accuracy": 0.3333333333333333,
+            "eval_runtime": 0.1301,
+            "eval_samples_per_second": 92.24,
+            "eval_steps_per_second": 7.687,
+            "epoch": 10.0
+        }
+    }
+}

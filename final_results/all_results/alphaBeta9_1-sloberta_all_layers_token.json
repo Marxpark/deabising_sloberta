@@ -1,0 +1,145 @@
+{
+    "sentiment": {
+        "sentiment": {
+            "loss": 0.9792092442512512,
+            "metrics": {
+                "accuracy": 0.5613972764949674,
+                "f1_macro": 0.23969867030689115,
+                "f1_negative": 0.0,
+                "f1_neutral": 0.7190960109206734,
+                "f1_positive": 0.0,
+                "precision_negative": 0.0,
+                "precision_neutral": 0.5613972764949674,
+                "precision_positive": 0.0,
+                "recall_negative": 0.0,
+                "recall_neutral": 1.0,
+                "recall_positive": 0.0
+            }
+        }
+    },
+    "seat": {
+        "average": -1.7817984263448872e-08,
+        "standard_deviation": 1.8353705442569496e-08,
+        "min_value": -8.940696727410824e-08,
+        "min_sentence": "paleontolo\u0161ko delo\n",
+        "max_value": 3.973642981325298e-08,
+        "max_sentence": "sla\u0161\u010di\u010darsko delo\n"
+    },
+    "heilman": {
+        "positive_to_positive": {
+            "average": -1.1765928779735613e-09,
+            "standard_deviation": 2.000756421021899e-08,
+            "min_value": -6.244296135715643e-08,
+            "min_sentence": "katehetsko delo\n",
+            "max_value": 5.794896029698293e-08,
+            "max_sentence": "kriti\u010darsko delo\n"
+        },
+        "positive_to_positive_mixed": {
+            "average": -2.227373889112378e-09,
+            "standard_deviation": 2.8987360290861352e-08,
+            "min_value": -8.964349351714418e-08,
+            "min_sentence": "ortopedsko delo\n",
+            "max_value": 1.0028718011589888e-07,
+            "max_sentence": "kriti\u010darsko delo\n"
+        },
+        "negative_to_negative": {
+            "average": -1.3245476866619269e-09,
+            "standard_deviation": 1.5103252879758387e-08,
+            "min_value": -4.04460086533831e-08,
+            "min_sentence": "voja\u0161ko delo\n",
+            "max_value": 4.541306242167309e-08,
+            "max_sentence": "vodi\u0161ko delo\n"
+        },
+        "negative_to_negative_mixed": {
+            "average": -9.82339302573471e-09,
+            "standard_deviation": 2.120048360211927e-08,
+            "min_value": -6.930222573586775e-08,
+            "min_sentence": "\u017eonglersko delo\n",
+            "max_value": 4.9434010662707806e-08,
+            "max_sentence": "vodi\u0161ko delo\n"
+        },
+        "neutral_to_neutral": {
+            "average": -1.1363330139730615e-09,
+            "standard_deviation": 1.5825746220133034e-08,
+            "min_value": -4.872443160053308e-08,
+            "min_sentence": "dimnikarsko delo\n",
+            "max_value": 4.0209482965458676e-08,
+            "max_sentence": "kirur\u0161ko delo\n"
+        },
+        "neutral_to_neutral_mixed": {
+            "average": -5.968515658065114e-10,
+            "standard_deviation": 2.488960270472171e-08,
+            "min_value": -6.480822456467195e-08,
+            "min_sentence": "tkalsko delo\n",
+            "max_value": 6.338906599623328e-08,
+            "max_sentence": "varuhovno delo\n"
+        },
+        "directional_bias_alligned": {
+            "average": -4.0259864000499925e-11,
+            "standard_deviation": 2.3449255391520964e-08,
+            "min_value": -6.173338251702631e-08,
+            "min_sentence": "steklarsko delo\n",
+            "max_value": 7.285012149083059e-08,
+            "max_sentence": "kriti\u010darsko delo\n"
+        },
+        "directional_bias_alligned_mixed": {
+            "average": -1.6305223233058663e-09,
+            "standard_deviation": 3.306710559493524e-08,
+            "min_value": -9.437402037626441e-08,
+            "min_sentence": "varuhovno delo\n",
+            "max_value": 9.437402059830902e-08,
+            "max_sentence": "recenzetsko delo\n"
+        },
+        "directional_bias_from_neutrals": {
+            "average": -1.177599374042084e-09,
+            "standard_deviation": 2.0226612268583707e-08,
+            "min_value": -7.852675398822839e-08,
+            "min_sentence": "steklarsko delo\n",
+            "max_value": 4.94340105516855e-08,
+            "max_sentence": "krupje\u0161ko delo\n"
+        },
+        "spread": {
+            "average": 1.4795480868836546e-10,
+            "standard_deviation": 2.3562479060666038e-08,
+            "min_value": -5.818548654001887e-08,
+            "min_sentence": "mikrobiolo\u0161ko delo\n",
+            "max_value": 6.977527855500654e-08,
+            "max_sentence": "klju\u010davni\u010darsko delo\n"
+        }
+    },
+    "glue": {
+        "boolq": {
+            "eval_loss": 0.7396606802940369,
+            "eval_accuracy": 0.6,
+            "eval_runtime": 0.1242,
+            "eval_samples_per_second": 40.261,
+            "eval_steps_per_second": 8.052,
+            "epoch": 10.0
+        },
+        "cb": {
+            "eval_loss": 0.9407734274864197,
+            "eval_accuracy": 0.8333333333333334,
+            "eval_f1": 0.7575757575757575,
+            "eval_runtime": 0.1475,
+            "eval_samples_per_second": 40.687,
+            "eval_steps_per_second": 6.781,
+            "epoch": 10.0
+        },
+        "copa": {
+            "eval_loss": 0.6931474804878235,
+            "eval_accuracy": 0.0,
+            "eval_runtime": 0.9883,
+            "eval_samples_per_second": 40.473,
+            "eval_steps_per_second": 2.024,
+            "epoch": 10.0
+        },
+        "rte": {
+            "eval_loss": 0.703938901424408,
+            "eval_accuracy": 0.3333333333333333,
+            "eval_runtime": 0.148,
+            "eval_samples_per_second": 81.062,
+            "eval_steps_per_second": 6.755,
+            "epoch": 10.0
+        }
+    }
+}

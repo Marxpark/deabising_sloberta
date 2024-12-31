@@ -1,0 +1,12 @@
+{
+    "glue": {
+        "copa": {
+            "eval_loss": 0.6932948231697083,
+            "eval_accuracy": 0.35,
+            "eval_runtime": 1.5028,
+            "eval_samples_per_second": 26.618,
+            "eval_steps_per_second": 1.996,
+            "epoch": 3.0
+        }
+    }
+}

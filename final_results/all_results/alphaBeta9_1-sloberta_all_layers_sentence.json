@@ -1,0 +1,145 @@
+{
+    "sentiment": {
+        "sentiment": {
+            "loss": 0.9792139530181885,
+            "metrics": {
+                "accuracy": 0.5613972764949674,
+                "f1_macro": 0.23969867030689115,
+                "f1_negative": 0.0,
+                "f1_neutral": 0.7190960109206734,
+                "f1_positive": 0.0,
+                "precision_negative": 0.0,
+                "precision_neutral": 0.5613972764949674,
+                "precision_positive": 0.0,
+                "recall_negative": 0.0,
+                "recall_neutral": 1.0,
+                "recall_positive": 0.0
+            }
+        }
+    },
+    "seat": {
+        "average": 1.587343553951538e-08,
+        "standard_deviation": 1.8796538016268827e-08,
+        "min_value": -3.973642970223068e-08,
+        "min_sentence": "re\u017eisersko delo\n",
+        "max_value": 6.95387523119706e-08,
+        "max_sentence": "snemalsko delo\n"
+    },
+    "heilman": {
+        "positive_to_positive": {
+            "average": 2.816173527945016e-09,
+            "standard_deviation": 1.0454947776293963e-08,
+            "min_value": -2.223347883578697e-08,
+            "min_sentence": "kerami\u010darsko delo\n",
+            "max_value": 3.335021825368045e-08,
+            "max_sentence": "odvetni\u0161ko delo\n"
+        },
+        "positive_to_positive_mixed": {
+            "average": 6.319783273532815e-09,
+            "standard_deviation": 1.6890366727223782e-08,
+            "min_value": -3.1221480956133973e-08,
+            "min_sentence": "geodetsko delo\n",
+            "max_value": 5.5583696756400514e-08,
+            "max_sentence": "rudarsko delo\n"
+        },
+        "negative_to_negative": {
+            "average": -7.649363034242973e-11,
+            "standard_deviation": 7.476542029061471e-09,
+            "min_value": -1.9631688275012493e-08,
+            "min_sentence": "novinarsko delo\n",
+            "max_value": 2.034126744820952e-08,
+            "max_sentence": "zlatarsko delo\n"
+        },
+        "negative_to_negative_mixed": {
+            "average": -5.515593731151386e-10,
+            "standard_deviation": 1.1574848475615909e-08,
+            "min_value": -3.737116660573747e-08,
+            "min_sentence": "logopedsko delo\n",
+            "max_value": 3.831727157788123e-08,
+            "max_sentence": "blagajni\u010darsko delo\n"
+        },
+        "neutral_to_neutral": {
+            "average": 4.490981502519941e-09,
+            "standard_deviation": 1.1947648257285398e-08,
+            "min_value": -2.2233478613742363e-08,
+            "min_sentence": "koreografsko delo\n",
+            "max_value": 5.4401064875087e-08,
+            "max_sentence": "ekonomsko delo\n"
+        },
+        "neutral_to_neutral_mixed": {
+            "average": 5.056631805476467e-09,
+            "standard_deviation": 1.7166351907585482e-08,
+            "min_value": -2.6254427076821685e-08,
+            "min_sentence": "pravni\u0161ko delo\n",
+            "max_value": 6.433517230064467e-08,
+            "max_sentence": "ekonomsko delo\n"
+        },
+        "directional_bias_alligned": {
+            "average": -1.6748079745749246e-09,
+            "standard_deviation": 1.2146721452036207e-08,
+            "min_value": -5.227232757754052e-08,
+            "min_sentence": "novinarsko delo\n",
+            "max_value": 3.169453333118355e-08,
+            "max_sentence": "kleparsko delo\n"
+        },
+        "directional_bias_alligned_mixed": {
+            "average": 1.263151468056348e-09,
+            "standard_deviation": 1.5307174597959265e-08,
+            "min_value": -4.2338219818915945e-08,
+            "min_sentence": "statisti\u010dno delo\n",
+            "max_value": 5.274538050770161e-08,
+            "max_sentence": "kleparsko delo\n"
+        },
+        "directional_bias_from_neutrals": {
+            "average": -1.2973722961188598e-09,
+            "standard_deviation": 9.978371968476702e-09,
+            "min_value": -4.4230430429337275e-08,
+            "min_sentence": "novinarsko delo\n",
+            "max_value": 2.341611071710048e-08,
+            "max_sentence": "ekolo\u0161ko delo\n"
+        },
+        "spread": {
+            "average": 2.892667158287446e-09,
+            "standard_deviation": 1.3233157155462194e-08,
+            "min_value": -3.098495449105343e-08,
+            "min_sentence": "kerami\u010darsko delo\n",
+            "max_value": 3.9263377438203406e-08,
+            "max_sentence": "varuhovno delo\n"
+        }
+    },
+    "glue": {
+        "boolq": {
+            "eval_loss": 0.7336156368255615,
+            "eval_accuracy": 0.6,
+            "eval_runtime": 0.1197,
+            "eval_samples_per_second": 41.773,
+            "eval_steps_per_second": 8.355,
+            "epoch": 10.0
+        },
+        "cb": {
+            "eval_loss": 1.0112446546554565,
+            "eval_accuracy": 0.8333333333333334,
+            "eval_f1": 0.7575757575757575,
+            "eval_runtime": 0.1311,
+            "eval_samples_per_second": 45.78,
+            "eval_steps_per_second": 7.63,
+            "epoch": 10.0
+        },
+        "copa": {
+            "eval_loss": 0.6932299137115479,
+            "eval_accuracy": 0.0,
+            "eval_runtime": 0.934,
+            "eval_samples_per_second": 42.828,
+            "eval_steps_per_second": 2.141,
+            "epoch": 10.0
+        },
+        "rte": {
+            "eval_loss": 0.7019254565238953,
+            "eval_accuracy": 0.3333333333333333,
+            "eval_runtime": 0.1478,
+            "eval_samples_per_second": 81.184,
+            "eval_steps_per_second": 6.765,
+            "epoch": 10.0
+        }
+    }
+}
